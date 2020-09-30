@@ -5,9 +5,9 @@
 
 -- b) Mostre os nomes, a função dos funcionários e o departamento que ele trabalha. Agrupando pelo nome do departamento.
 
- select funcionários.primeiro_Nome, funcionários.segundo_Nome, funcionários.ultimo_Nome, departamentos.nome as Departamento
+select funcionários.primeiro_Nome, funcionários.segundo_Nome, funcionários.ultimo_Nome, departamentos.nome as Departamento
 from funcionários inner join departamentos
-on funcionários.codigo_Depto = departamentos.codigo_Depto;
+on funcionários.codigo_Depto = departamentos.codigo_Depto group by departamentos.nome;
 
 
 -- c) Mostre os nomes, o endereço, RG e CPF dos funcionários que trabalham no departamento de TI.
